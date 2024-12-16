@@ -124,7 +124,7 @@ class SideBarWidget extends StatelessWidget {
             child: Consumer<LabelProvider>(
                 builder: (context, labelProvider, child) {
               if (labelProvider.labels.isEmpty) {
-                return Center(
+                return const Center(
                   child: Text("No label, add some"),
                 );
               }
@@ -229,7 +229,7 @@ class SideBarWidget extends StatelessWidget {
                       showDialog(
                         context: context,
                         builder: (context) {
-                          return SettingsDialog();
+                          return const SettingsDialog();
                         },
                       );
                     },
@@ -270,7 +270,7 @@ class SideBarWidget extends StatelessWidget {
                   ),
                   child: Text(
                     editProvider.initials,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Colors.white,
                     ),
@@ -284,7 +284,7 @@ class SideBarWidget extends StatelessWidget {
                       editProvider.name.length > 20
                           ? '${editProvider.name.substring(0, 20)}...'
                           : editProvider.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                         color: AppColors.primaryTxtColor,
@@ -294,7 +294,7 @@ class SideBarWidget extends StatelessWidget {
                     ),
                     Text(
                       greetingProvider.greeting,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         color: AppColors.secondaryTxtColor,
                       ),

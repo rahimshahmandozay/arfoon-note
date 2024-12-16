@@ -20,8 +20,8 @@ class HAppBarWidget extends StatelessWidget implements PreferredSizeWidget {
             height: 28,
             width: 28,
           ),
-          SizedBox(width: 4),
-          Text(
+          const SizedBox(width: 4),
+          const Text(
             "Arfoon Note",
             style: TextStyle(
               fontSize: 20,

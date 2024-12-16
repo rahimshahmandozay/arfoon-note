@@ -6,7 +6,7 @@ class GreetingProvider extends ChangeNotifier {
 
   GreetingProvider() {
     _updateGreeting();
-    Timer.periodic(Duration(seconds: 1), (timer) => _updateGreeting());
+    Timer.periodic(const Duration(seconds: 1), (timer) => _updateGreeting());
   }
 
   String get greeting => _greeting;

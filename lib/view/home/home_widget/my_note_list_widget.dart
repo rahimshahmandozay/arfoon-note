@@ -56,11 +56,11 @@ class _MyNoteListWidgetState extends State<MyNoteListWidget> {
                       DateFormat('d MMM').format(widget.data),
                       style: TextStyle(
                         color: widget.backgroundColor == AppColors.surface
-                            ? Color(0xFF919191)
+                            ? const Color(0xFF919191)
                             : Colors.white,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Container(
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
@@ -100,7 +100,7 @@ class _MyNoteListWidgetState extends State<MyNoteListWidget> {
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                     color: widget.backgroundColor == AppColors.surface
-                        ? Color(0xFF09090B)
+                        ? const Color(0xFF09090B)
                         : Colors.white,
                   ),
                   maxLines: 1,
@@ -115,7 +115,7 @@ class _MyNoteListWidgetState extends State<MyNoteListWidget> {
                     widget.description,
                     style: TextStyle(
                       color: widget.backgroundColor == AppColors.surface
-                          ? Color(0xFFA2A2A2)
+                          ? const Color(0xFFA2A2A2)
                           : Colors.white,
                     ),
                     maxLines: 3,
@@ -150,7 +150,7 @@ class _MyNoteListWidgetState extends State<MyNoteListWidget> {
                           ),
                           child: Text(
                             widget.label,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 12,
                               color: AppColors.secondaryTxtColor,
                             ),

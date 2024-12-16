@@ -14,34 +14,33 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: Responsive.isMobile(context) ? HAppBarWidget() : null,
+        appBar: Responsive.isMobile(context) ? const HAppBarWidget() : null,
         drawer: Responsive.isMobile(context)
-            ? Drawer(
+            ? const Drawer(
                 backgroundColor: AppColors.surface,
                 child: SideBarWidget(),
               )
-
             : null,
         floatingActionButton:
-            Responsive.isMobile(context) ? FloatingButton() : null,
+            Responsive.isMobile(context) ? const FloatingButton() : null,
         body: Responsive(
-          mobile: MyNoteWidget(),
+          mobile: const MyNoteWidget(),
           desktop: Row(
             children: [
               Container(
                 width: 256,
                 color: AppColors.surface,
-                child: SideBarWidget(),
+                child: const SideBarWidget(),
               ),
               Container(
                 width: 345,
                 color: AppColors.lightBackground,
-                child: MyNoteWidget(),
+                child: const MyNoteWidget(),
               ),
               Expanded(
                 child: Container(
                   color: AppColors.lightBackground,
-                  child: AddTodoScreen(),
+                  child: const AddTodoScreen(),
                 ),
               ),
             ],

@@ -21,7 +21,7 @@ class SettingsDialog extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.all(6),
+                padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
                     color: AppColors.primary,
                     borderRadius: BorderRadius.circular(8)),
@@ -29,13 +29,13 @@ class SettingsDialog extends StatelessWidget {
                   AppVectors.setting,
                   height: 64,
                   width: 64,
-                  colorFilter: ColorFilter.mode(
+                  colorFilter: const ColorFilter.mode(
                     Colors.white,
                     BlendMode.srcIn,
                   ),
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               const Text(
                 "Arfoon Note Settings",
                 style: TextStyle(
@@ -48,7 +48,7 @@ class SettingsDialog extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Change Language",
                     style: TextStyle(
                       color: AppColors.disabled,
@@ -56,7 +56,7 @@ class SettingsDialog extends StatelessWidget {
                   ),
                   const SizedBox(height: 6),
                   Container(
-                    padding: EdgeInsets.fromLTRB(8, 10, 12, 11),
+                    padding: const EdgeInsets.fromLTRB(8, 10, 12, 11),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: AppColors.borderColor,
@@ -66,7 +66,7 @@ class SettingsDialog extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "English",
                           style: TextStyle(
                             fontSize: 17,
@@ -80,7 +80,7 @@ class SettingsDialog extends StatelessWidget {
                             AppVectors.changer,
                             height: 24,
                             width: 24,
-                            colorFilter: ColorFilter.mode(
+                            colorFilter: const ColorFilter.mode(
                               AppColors.disabled,
                               BlendMode.srcIn,
                             ),
@@ -89,8 +89,8 @@ class SettingsDialog extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 18),
-                  Text(
+                  const SizedBox(height: 18),
+                  const Text(
                     "Change Theme",
                     style: TextStyle(
                       color: AppColors.disabled,
@@ -98,7 +98,7 @@ class SettingsDialog extends StatelessWidget {
                   ),
                   const SizedBox(height: 6),
                   Container(
-                    padding: EdgeInsets.fromLTRB(8, 10, 12, 11),
+                    padding: const EdgeInsets.fromLTRB(8, 10, 12, 11),
                     decoration: BoxDecoration(
                         border: Border.all(
                           color: AppColors.borderColor,
@@ -107,7 +107,7 @@ class SettingsDialog extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           "System Theme",
                           style: TextStyle(
                             fontSize: 17,
@@ -121,7 +121,7 @@ class SettingsDialog extends StatelessWidget {
                             AppVectors.changer,
                             height: 24,
                             width: 24,
-                            colorFilter: ColorFilter.mode(
+                            colorFilter: const ColorFilter.mode(
                               AppColors.disabled,
                               BlendMode.srcIn,
                             ),

@@ -16,13 +16,13 @@ class FloatingButton extends StatelessWidget {
       onPressed: () async {
         await Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => AddTodoScreen(),
+            builder: (context) => const AddTodoScreen(),
           ),
         );
       },
       child: SvgPicture.asset(
         AppVectors.plus,
-        colorFilter: ColorFilter.mode(
+        colorFilter: const ColorFilter.mode(
           Colors.white,
           BlendMode.srcIn,
         ),

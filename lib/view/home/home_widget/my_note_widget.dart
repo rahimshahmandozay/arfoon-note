@@ -52,7 +52,7 @@ class _MyNoteWidgetState extends State<MyNoteWidget> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "My Notes",
                   style: TextStyle(
                     fontSize: 24,
@@ -81,7 +81,7 @@ class _MyNoteWidgetState extends State<MyNoteWidget> {
               ],
             ),
           Responsive.isMobile(context)
-              ? SizedBox(
+              ? const SizedBox(
                   height: 20,
                 )
               : const SizedBox(height: 30),
@@ -100,7 +100,7 @@ class _MyNoteWidgetState extends State<MyNoteWidget> {
               onChanged: (value) {
                 context.read<TodoProvider>().searchQuery(value);
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
                 ),
@@ -149,7 +149,7 @@ class _MyNoteWidgetState extends State<MyNoteWidget> {
                 },
               ),
             ),
-          if (Responsive.isMobile(context)) SizedBox(height: 20),
+          if (Responsive.isMobile(context)) const SizedBox(height: 20),
           Expanded(
             child: Consumer<TodoProvider>(
               builder: (context, noteProvider, child) {
@@ -162,7 +162,7 @@ class _MyNoteWidgetState extends State<MyNoteWidget> {
                         .toList();
 
                 if (noteProvider.todos.isEmpty) {
-                  return Center(
+                  return const Center(
                     child: Text("There is no Todo, please add some."),
                   );
                 }
@@ -171,11 +171,10 @@ class _MyNoteWidgetState extends State<MyNoteWidget> {
                   itemBuilder: (context, index) {
                     final note = filteredTodos[index];
                     return Dismissible(
-                      key: ValueKey(note.saveTime),
+                      key: UniqueKey(),
                       onDismissed: (direction) {
-                        setState(() {
-                          context.read<TodoProvider>().deleteTask(index);
-                        });
+                        context.read<TodoProvider>().deleteTask(index);
+
                         ScaffoldMessenger.of(context).clearSnackBars();
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(

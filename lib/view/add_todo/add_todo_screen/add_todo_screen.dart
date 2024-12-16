@@ -65,7 +65,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
       return WillPopScope(
         onWillPop: _onWillPop,
         child: Scaffold(
-          appBar: AAppBarWidget(),
+          appBar: const AAppBarWidget(),
           body: todoDetailsWidget(),
         ),
       );
@@ -171,7 +171,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
               ],
             ),
           if (Responsive.isDesktop(context))
-            Divider(
+            const Divider(
               thickness: 1,
               color: AppColors.dividerColor,
             ),
@@ -179,14 +179,14 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
             child: Container(
               color: _backgroundColor,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     if (Responsive.isMobile(context))
                       const SizedBox(height: 20),
                     if (Responsive.isMobile(context))
-                      Text(
+                      const Text(
                         "Updated at Dec 17",
                         style: TextStyle(
                           color: AppColors.secondaryTxtColor,
@@ -243,7 +243,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
           ),
           const SizedBox(height: 10),
           Container(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 15,
               vertical: 8,
             ),

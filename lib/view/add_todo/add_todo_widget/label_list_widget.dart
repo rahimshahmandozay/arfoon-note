@@ -8,17 +8,17 @@ class LabelListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 6,
       ),
       decoration: BoxDecoration(
-        color: Color(0xFFF4F4F5),
+        color: const Color(0xFFF4F4F5),
         borderRadius: BorderRadius.circular(19),
       ),
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           color: AppColors.primaryTxtColor,
         ),
       ),

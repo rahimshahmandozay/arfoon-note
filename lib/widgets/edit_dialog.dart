@@ -28,7 +28,7 @@ class EditDialog extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SvgPicture.asset(AppVectors.logo, height: 89, width: 89),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const Text(
                 "Welcome to Arfoon Note",
                 style: TextStyle(
@@ -62,7 +62,7 @@ class EditDialog extends StatelessWidget {
               const SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 16,
                     vertical: 10,
                   ),
@@ -79,8 +79,8 @@ class EditDialog extends StatelessWidget {
                 },
                 child: const Text("Continue"),
               ),
-              SizedBox(height: 7),
-              Text(
+              const SizedBox(height: 7),
+              const Text(
                 "By using X note you agree to Terms of Services and Privacy Policy",
                 style: TextStyle(
                   color: Color(0xFFA2A2A2),
